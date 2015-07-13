@@ -56,3 +56,35 @@ function stringCapitalize(str) {
   //for loop
   //variable to target the first letter in first word
 console.log(stringCapitalize);
+
+//5. Define a function called evenNumbers that takes a random integer, from 0 to
+//100, and outputs all the even integers from 0 to that random number.
+
+function evenNumbers (randomInteger) {
+  if ( randomInteger > 100 || randomInteger < 0){
+    return "number has to be between 0 and 100";
+  }
+  var even =[];
+  for (var i = 0; i <=randomInteger; i++) {
+    if (i%2 === 0) {
+      even.push(i);
+    }
+  }
+  return even
+}
+console.log(evenNumbers);
+
+//6. Define a function called isDivisible that takes two arguments and returns a
+//boolean. Return true if the first argument is divisible by the second; otherwise,
+//return false.
+
+function isDivisible(argument1, argument2) {
+  if ((argument1/argument2) % 2 === 0){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+console.log(isDivisible);
