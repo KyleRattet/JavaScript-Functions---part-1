@@ -88,3 +88,30 @@ function isDivisible(argument1, argument2) {
 }
 
 console.log(isDivisible);
+
+//7. Bonus: Write a function called oddNumbers that takes a random integer, from
+//0 to 100. If the number is greater than 40 then output all the odd integers from
+//40 to the random number. If the number is less than 40, output all the odd integers
+//from 0 to 40.
+
+function oddNumbers(numberRandom) {
+  var odd = [];
+  if (numberRandom > 100 || numberRandom < 0) {
+    return "number has to be 0<number<100";
+  }
+  if (numberRandom <= 40) {
+    for (var i = 0; i <= numberRandom; i++) {
+      if (i%2 == 1){
+        odd.push(i);
+      }
+    }
+    }  else {
+      for (var i = 40; i <= numberRandom; i++) {
+        if (i%2 === 1){
+          odd.push(i);
+        }
+      }
+    }
+  return odd;
+}
+console.log(oddNumbers);
