@@ -36,3 +36,23 @@ function discountPercentage(originalAmount, discountAmountPercent) {
 }
 
 console.log(discountPercentage);
+
+//4. Define a function called stringCapitalize that takes a string as an argument
+//and returns the same string with the first letter of each word capitalized.
+//Assume that each individual work is separated by only one space.
+
+function stringCapitalize(str) {
+  var individual =str.split(" ");
+  for (var i = 0; i < individual.length; i++) {
+    var firstLetter = individual[i].charAt(0);
+    var restOfWord = individual[i].slice(1);
+    individual[i] = firstLetter.toUpperCase() + restOfWord;
+    // individual[i].charAt(0).toUpperCase() + individual(i).slice(1)
+  }
+  return individual.join(" ");
+}
+  // return individual.toUpperCase
+  //iterate through each word
+  //for loop
+  //variable to target the first letter in first word
+console.log(stringCapitalize);
