@@ -6,7 +6,7 @@ function sum (num1, num2) {
   return num1 + num2
 }
 
-console.log(sum);
+console.log(sum(2,3));
 
 //2. Define a function called isEqual that takes two arguments and returns a boolean.
 //Return true if the two arguments are equal and return false if they are not.
@@ -20,7 +20,7 @@ function isEqual(argument1, argument2) {
   }
 }
 
-console.log(isEqual);
+console.log(isEqual(2,2));
 
 //3. Define a function called discountPercentage that returns the total discount ($),
 //given the original amount and discount percentage (as arguments).
@@ -35,14 +35,16 @@ function discountPercentage(originalAmount, discountAmountPercent) {
   }
 }
 
-console.log(discountPercentage);
+console.log(discountPercentage(10,25));
 
 //4. Define a function called stringCapitalize that takes a string as an argument
 //and returns the same string with the first letter of each word capitalized.
 //Assume that each individual work is separated by only one space.
 
 function stringCapitalize(str) {
+  //create an array of individual strings for words
   var individual =str.split(" ");
+  //for loop to isolate
   for (var i = 0; i < individual.length; i++) {
     var firstLetter = individual[i].charAt(0);
     var restOfWord = individual[i].slice(1);
@@ -55,7 +57,7 @@ function stringCapitalize(str) {
   //iterate through each word
   //for loop
   //variable to target the first letter in first word
-console.log(stringCapitalize);
+console.log(stringCapitalize("test this stuff"));
 
 //5. Define a function called evenNumbers that takes a random integer, from 0 to
 //100, and outputs all the even integers from 0 to that random number.
@@ -72,7 +74,7 @@ function evenNumbers (randomInteger) {
   }
   return even
 }
-console.log(evenNumbers);
+console.log(evenNumbers(15));
 
 //6. Define a function called isDivisible that takes two arguments and returns a
 //boolean. Return true if the first argument is divisible by the second; otherwise,
@@ -87,7 +89,7 @@ function isDivisible(argument1, argument2) {
   }
 }
 
-console.log(isDivisible);
+console.log(isDivisible(6,4));
 
 //7. Bonus: Write a function called oddNumbers that takes a random integer, from
 //0 to 100. If the number is greater than 40 then output all the odd integers from
@@ -95,10 +97,10 @@ console.log(isDivisible);
 //from 0 to 40.
 
 function oddNumbers(numberRandom) {
-  var odd = [];
   if (numberRandom > 100 || numberRandom < 0) {
     return "number has to be 0<number<100";
   }
+  var odd = [];
   if (numberRandom <= 40) {
     for (var i = 0; i <= numberRandom; i++) {
       if (i%2 == 1){
@@ -114,4 +116,4 @@ function oddNumbers(numberRandom) {
     }
   return odd;
 }
-console.log(oddNumbers);
+console.log(oddNumbers(42));
