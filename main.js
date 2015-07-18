@@ -44,10 +44,13 @@ console.log(discountPercentage(10,25));
 function stringCapitalize(str) {
   //create an array of individual strings for words
   var individual =str.split(" ");
-  //for loop to isolate
+  //for loop to isolate each object
   for (var i = 0; i < individual.length; i++) {
+    //variable to isolate first letter or each word
     var firstLetter = individual[i].charAt(0);
+    //variable to isolate rest of each words
     var restOfWord = individual[i].slice(1);
+    //variable to combine first letter and rest of word
     individual[i] = firstLetter.toUpperCase() + restOfWord;
     // individual[i].charAt(0).toUpperCase() + individual(i).slice(1)
   }
